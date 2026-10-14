@@ -1,0 +1,34 @@
+{
+  "name": "ppflight-stock-monitor",
+  "version": "1.1.0",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "once": "RUN_MODE=once node src/index.js",
+    "daemon": "RUN_MODE=daemon node src/index.js",
+    "dev": "NODE_ENV=development node src/index.js",
+    "debug": "DEBUG=true node src/index.js",
+    "test:notify": "node test_notify.js"
+  },
+  "keywords": [
+    "vps",
+    "ppflight",
+    "restock",
+    "monitor",
+    "sentinel",
+    "telegram",
+    "bark",
+    "cloudflare"
+  ],
+  "license": "MIT",
+  "description": "PPFlight VPS 补货监控哨兵 - 支持 Cloudflare 穿透、Telegram 和 Bark (iOS) 双通道推送",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "puppeteer-real-browser": "^1.4.4",
+    "node-telegram-bot-api": "^0.64.0",
+    "dotenv": "^16.4.1"
+  }
+}
